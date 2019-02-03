@@ -66,7 +66,8 @@ namespace Simple.Data
             var assembly = knownSiblingType.Assembly;
 
             var configuration = new ContainerConfiguration()
-                .WithAssembly(ThisAssembly);
+                .WithAssembly(ThisAssembly)
+                .WithAssembly(assembly);
 
             using (var container = configuration.CreateContainer())
             {
